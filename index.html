@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Strings</title>
+</head>
+<body>
+    <!--Interoplacion-->
+
+    <p class="lista"></p>
+    
+    <script>
+        let lista = document.getElementById("lista")
+
+        let texto = 'Hola mi nombre es `Juan`';
+        console.log(texto);
+
+        console.log(`cadena de texto en linea 1 cadena de texto en linea 2`);
+
+        let a = 5;
+        let b = 10;
+        
+        console.log(`Suma es: ${a + b}` ,` y Multiplicacion: ${a * b }`);
+        
+        let precio = 100;
+        const IVA = 0.16;
+        let total = `Total: ${ (precio * (1+ IVA).toFixed(2))} `
+        console.log(`Precio con IVA: ` + total);
+
+        let persona = "Mike";
+        let edad = 16;
+
+        function miFuncion(cadenas, personaExp, edadExp){
+            console.log(cadenas);
+            console.log(cadenas[0]);
+            console.log(personaExp)
+
+            //Condicional ternario
+            
+            return edadExp>18 ? "Mayor de edad" : "Menor de Edad";
+        }
+        
+        const resultado = miFuncion(`El señor ${persona} tiene
+        una edad de ${edad}. `);
+        console.log(resultado);
+        
+        let titulo = "Mejores canaantes mujeres";
+        let cantantes = ["Rihanna", "Bellacath","Shakira"];
+        let html = `<h2> ${ titulo} </h2>`;
+        
+        html += "<ul>";
+            
+            for(let cantante of cantantes){
+                html += `<li>${cantante}</li>`;
+            };
+           
+    </script>
+</body>
+</html>
